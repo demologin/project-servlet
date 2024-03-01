@@ -1,0 +1,180 @@
+body {
+    background-color: #383838;
+}
+
+h1 {
+    font-family: "Arial Black";
+    color: white;
+
+}
+
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ec6b14;
+    border-radius: 14px;
+    border-collapse: collapse;
+
+}
+
+
+
+td {
+    font-family: "Arial Black";
+    color: white;
+    border-spacing: 40px;
+    border: 5px solid #383838;
+    padding: 14px;
+    margin: 14px;
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    text-align: center;
+    empty-cells: show;
+}
+
+tr:first-child td {
+    border-top: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr td:first-child {
+    border-left: none;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+
+.bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-new {
+    text-align: center;
+    font-family: "Arial Black";
+    border: none;
+    padding: 12px 18px;
+    transition: 0.5s;
+    font-size: 30px;
+    background-size: 300% auto;
+    color: white;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #003CC5 0%, #0B63F6 51%, #003CC5 100%);
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-new:hover {
+    background-position: right center;
+}
+
+body {
+    background-color: #383838;
+}
+
+h1 {
+    font-family: "Arial Black";
+    color: white;
+
+}
+
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ec6b14;
+    border-radius: 14px;
+    border-collapse: collapse;
+
+}
+
+
+
+td {
+    font-family: "Arial Black";
+    color: white;
+    border-spacing: 40px;
+    border: 5px solid #383838;
+    padding: 14px;
+    margin: 14px;
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    text-align: center;
+    empty-cells: show;
+}
+
+tr:first-child td {
+    border-top: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr td:first-child {
+    border-left: none;
+}
+
+tr td:last-child {
+    border-right: none;
+}
+
+
+.bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-new {
+    text-align: center;
+    font-family: "Arial Black";
+    border: none;
+    padding: 12px 18px;
+    transition: 0.5s;
+    font-size: 30px;
+    background-size: 300% auto;
+    color: white;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #003CC5 0%, #0B63F6 51%, #003CC5 100%);
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-new:hover {
+    background-position: right center;
+}
+
