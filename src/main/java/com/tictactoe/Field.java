@@ -32,14 +32,14 @@ public class Field {
                 .findFirst().orElse(-1);
     }
 
-    public List<Sign> getFieldData() {
+     public List<Sign> getFieldData() {
         return field.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .map(Map.Entry::getValue)
                 .collect(Collectors.toList());
     }
 
-    public Sign checkWin() {
+        public Sign checkWin() {
         List<List<Integer>> winPossibilities = List.of(
                 List.of(0, 1, 2),
                 List.of(3, 4, 5),
