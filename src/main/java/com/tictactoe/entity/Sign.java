@@ -1,4 +1,4 @@
-package com.tictactoe;
+package com.tictactoe.entity;
 
 public enum Sign {
     EMPTY(' '),
