@@ -1,4 +1,4 @@
-package com.tictactoe;
+package com.tictactoe.entity;
 
 public enum Sign {
     EMPTY(' '),
@@ -11,7 +11,4 @@ public enum Sign {
         this.sign = sign;
     }
 
-    public char getSign() {
-        return sign;
-    }
 }
