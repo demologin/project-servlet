@@ -11,4 +11,7 @@ public enum Sign {
         this.sign = sign;
     }
 
+    public char getSign() {
+        return sign;
+    }
 }
