@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="static/main.css" rel="stylesheet">
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
