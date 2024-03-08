@@ -40,6 +40,11 @@
     <h2>NOUGHTS WIN!</h2>
     <button onclick="restart()">Start again</button>
 </c:if>
+<c:if test="${draw}">
+    <h2>IT'S A DRAW</h2>
+    <br>
+    <button onclick="restart()">Start again</button>
+</c:if>
 
 
 <script>
