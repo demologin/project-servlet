@@ -1,5 +1,6 @@
 package com.tictactoe;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,7 +20,20 @@ public class LogicServlet extends HttpServlet {
         Field field = extractField(currentSession);
 
         int index = getSelectedIndex(req);
+        Sign currentSign = field.getField().get(index);
+
+        if (Sign.EMPTY != currentSign) {
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            dispatcher.forward(req, resp);
+            return;
+        }
+
         field.getField().put(index, Sign.CROSS);
+
+        int emptyFieldIndex = field.getEmptyFieldIndex();
+        if (emptyFieldIndex >= 0) {
+            field.getField().put(emptyFieldIndex, Sign.NOUGHT);
+        }
 
         List<Sign> data = field.getFieldData();
 
@@ -42,5 +56,17 @@ public class LogicServlet extends HttpServlet {
             throw new RuntimeException("Something's wrong, try one more time");
         }
         return (Field) fieldAttribute;
+    }
+
+    private boolean checkWin(HttpServletResponse response, HttpSession currentSession, Field field) throws IOException {
+        Sign winner = field.checkWin();
+        if (Sign.CROSS == winner || Sign.NOUGHT == winner) {
+            currentSession.setAttribute("winner", winner);
+            List<Sign> data = field.getFieldData();
+            currentSession.setAttribute("data", data);
+            response.sendRedirect("/index.jsp");
+            return true;
+        }
+        return false;
     }
 }
