@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <link href="static/main.css" rel="stylesheet">
     <title>Tic-Tac-Toe</title>
 </head>
@@ -10,19 +11,19 @@
 <h1>Tic-Tac-Toe</h1>
 <table>
     <tr>
-        <td onclick="window.location='/logic?click=0'">0</td>
-        <td onclick="window.location='/logic?click=1'">1</td>
-        <td onclick="window.location='/logic?click=2'">2</td>
+        <td onclick="window.location='/logic?click=0'">${data.get(0).getSign()}</td>
+        <td onclick="window.location='/logic?click=1'">${data.get(1).getSign()}</td>
+        <td onclick="window.location='/logic?click=2'">${data.get(2).getSign()}</td>
     </tr>
     <tr>
-        <td onclick="window.location='/logic?click=3'">3</td>
-        <td onclick="window.location='/logic?click=4'">4</td>
-        <td onclick="window.location='/logic?click=5'">5</td>
+        <td onclick="window.location='/logic?click=3'">${data.get(3).getSign()}</td>
+        <td onclick="window.location='/logic?click=4'">${data.get(4).getSign()}</td>
+        <td onclick="window.location='/logic?click=5'">${data.get(5).getSign()}</td>
     </tr>
     <tr>
-        <td onclick="window.location='/logic?click=6'">6</td>
-        <td onclick="window.location='/logic?click=7'">7</td>
-        <td onclick="window.location='/logic?click=8'">8</td>
+        <td onclick="window.location='/logic?click=6'">${data.get(6).getSign()}</td>
+        <td onclick="window.location='/logic?click=7'">${data.get(7).getSign()}</td>
+        <td onclick="window.location='/logic?click=8'">${data.get(8).getSign()}</td>
     </tr>
 </table>
 
