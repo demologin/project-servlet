@@ -1,7 +1,7 @@
 table {
     border-collapse: collapse;
-    border-spacing: 0; /* Remove if you don't want space between cells */
-    margin: 10px; /* If you want to add margin around the entire table */
+    border-spacing: 0;
+    margin: 10px;
 }
 
 td {

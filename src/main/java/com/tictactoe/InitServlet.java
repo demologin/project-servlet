@@ -1,5 +1,6 @@
 package com.tictactoe;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +22,8 @@ public class InitServlet extends HttpServlet {
         currentSession.setAttribute("field", field);
         currentSession.setAttribute("data", data);
 
-        getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+        requestDispatcher.forward(req, resp);
 
 
     }
